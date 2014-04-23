@@ -1,0 +1,79 @@
+//GLOBAL STYLES
+
+html, body{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+em{ font-style:italic; }
+
+small{ font-size:$fontsize-small; }
+
+h1{ font-family:$sans-bold; font-size:$fontsize-toobig; }
+h2{ font-family:$sans-bold; font-size:$fontsize-huge; }
+h3{ font-family:$sans-bold; font-size:$fontsize-bigger; }
+h4{ font-family:$sans-bold; font-size:$fontsize-big; }
+h5{ font-family:$sans-bold; font-size:$fontsize-medium; }
+h6{ font-family:$sans-bold; font-size:$fontsize-base; }
+
+p{ font-family:$sans-regular; font-size:$fontsize-base; }
+
+
+//BUTTON BASE STYLES
+	.btn{
+		border-radius:3px;
+		color:$base-white;
+		display:inline-block;
+		font-family:$sans-regular;
+		font-size:$fontsize-base;
+		@include transition ( all 0.2s ease-in-out );
+		padding:12px 20px 8px;
+		text-align:center;
+		text-decoration:none;
+		text-transform:uppercase;
+
+		small{
+			display:block;
+			margin-top:0.5em;
+		}
+
+		&:hover{
+			text-decoration:none;
+		}
+
+		&:active{
+			color:$base-white;
+		}
+
+		&:focus{
+			color:$base-white;
+			outline:none;
+		}
+	}
+
+//GREEN BUTTON
+	.btn-green{
+		border: 1px solid #17631C;
+		color:$base-white;
+		@include boxShadow(1px 0 2px, rgba(0,0,0,0.2));
+		@include textShadow(0 -1px 1px, rgba(255,255,255,0.4));
+		@include insetShadow(0 1px 1px, rgba(255,255,255,0.58));
+		@include linear-gradient($base-green, $dark-green);
+
+		&:hover{
+			border:1px solid #5D801A;
+			color:#FAFAFA !important;
+		}
+
+		&:active{
+			border:1px solid #5D801A;
+			color:#98CB34;
+			@include linear-gradient($dark-green, $base-green);
+		}
+	}
+
+
+//BUTTON STYLES
+	.btn-small{ padding:8px 10px !important; }
+	.btn-large{ font-size:$fontsize-big; padding:15px 50px !important; }

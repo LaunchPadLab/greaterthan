@@ -1,0 +1,77 @@
+html, body{
+	overflow:hidden;
+}
+.page-layout{
+	background-color:$dark-white;
+
+	.main-page-container{
+		background:transparent url(../images/background-img.png) no-repeat center center;
+		height:100%;
+		@include outer-container;
+
+		.left-section{
+			@include span-columns(6);
+			margin-top:5.5em;
+
+			.logo{
+				@include retina-image('../images/logo', 424px 160px);
+				background-repeat:no-repeat;
+				height:160px;
+				text-indent:-9999px;
+			}
+
+			.main-message{
+				margin-top:3.3em;
+
+				h1{
+					color:$base-green;
+					text-transform:uppercase;
+					font-size:$fontsize-toobig + 10px;
+				}
+
+				p{
+					border-left:10px solid $base-green;
+					color:$dark-grey;
+					font-size:$fontsize-medium;
+					line-height:normal;
+					margin-top:1.5em;
+					padding-left:1.0em;
+
+					.cite{
+						font-family:$sans-bold;
+						display:block;
+						margin-top:1.3em; 
+					}
+				}
+
+				.btn-green{
+					margin-top:1.5em;
+				}
+			}
+		}
+
+		.right-section{
+			@include span-columns(6);
+			margin-top:3.3em;
+
+			li{
+				width:145px;
+				display:inline;
+				float:left;
+
+				img{ display:inline; height:746px; }
+
+				&.bottle-left, &.bottle-right{
+					bottom:15px;
+					position:relative;
+					z-index:1;
+				}
+
+				&.bottle-front{
+					position:relative;
+					z-index:2;
+				}
+			}
+		}
+	}
+}
