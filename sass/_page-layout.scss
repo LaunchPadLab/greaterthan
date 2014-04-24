@@ -1,12 +1,12 @@
-html, body{
-	overflow:hidden;
-}
 .page-layout{
 	background-color:$dark-white;
+	@include radial-gradient(circle at 50% 50%, $base-white 20%, $dark-white 40%, #E6E8EB);
+	overflow-x:hidden;
+
+	.page-position-center{ position:absolute; }
 
 	.main-page-container{
-		background:transparent url(../images/background-img.png) no-repeat center center;
-		height:100%;
+		background:transparent url('../images/background-img.png') no-repeat center center;
 		@include outer-container;
 
 		.left-section{
@@ -30,12 +30,10 @@ html, body{
 				}
 
 				p{
-					border-left:10px solid $base-green;
 					color:$dark-grey;
 					font-size:$fontsize-medium;
 					line-height:normal;
 					margin-top:1.5em;
-					padding-left:1.0em;
 
 					.cite{
 						font-family:$sans-bold;
@@ -59,7 +57,7 @@ html, body{
 				display:inline;
 				float:left;
 
-				img{ display:inline; height:746px; }
+				img{ display:inline; height:746px; padding:2.5em 0 0; }
 
 				&.bottle-left, &.bottle-right{
 					bottom:15px;

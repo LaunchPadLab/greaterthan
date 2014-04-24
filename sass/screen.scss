@@ -11,8 +11,12 @@
 	@import "mixins";
 
 
+//FONTS
+	@import "fonts";
+	@import "font-awesome";
+
 
 //SITE STYLES
 	@import "base";
 	@import "page-layout";
-	@import "slideshow";
+	@import "footer";

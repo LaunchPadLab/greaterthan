@@ -25,7 +25,7 @@ p{ font-family:$sans-regular; font-size:$fontsize-base; }
 		border-radius:3px;
 		color:$base-white;
 		display:inline-block;
-		font-family:$sans-regular;
+		font-family:$sans-bold;
 		font-size:$fontsize-base;
 		@include transition ( all 0.2s ease-in-out );
 		padding:12px 20px 8px;
@@ -57,7 +57,7 @@ p{ font-family:$sans-regular; font-size:$fontsize-base; }
 		border: 1px solid #17631C;
 		color:$base-white;
 		@include boxShadow(1px 0 2px, rgba(0,0,0,0.2));
-		@include textShadow(0 -1px 1px, rgba(255,255,255,0.4));
+		@include textShadow(-1px -1px 0px, rgba(0,0,0,0.3));
 		@include insetShadow(0 1px 1px, rgba(255,255,255,0.58));
 		@include linear-gradient($base-green, $dark-green);
 

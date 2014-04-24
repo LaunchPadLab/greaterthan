@@ -11,36 +11,71 @@
 	<link href="stylesheets/screen.css" rel="stylesheet" type="text/css" />
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/modernizr/modernizr.js"></script>
 
 </head>
 
 <body class="page-layout">
+	<div class="page-position-center">
 
-	<div class="main-page-container">
-	
-		<section class="left-section">
-			<h1 class="logo">Greater Than</h1>
-			<div class="main-message">
-				<h1 class="green-text">Run. Play.</h1>
-				<h1 class="green-text">Hustle. Score.</h1>
-				<p>We’ve all tried sports drinks. Now we’d like you to experience something greater. Infused cocnut water charged with electrolytes and a hint of sea salt for greater hydration and taste. Low calorie. No dyes . No GMOs. No Boundaries.
-				<span class="cite"><em>Be GREATER THAN™ Mark & Jon</em></span></p>
-				<a href="#" class="btn btn-green btn-large">Buy Yours Today<br><small>Find it on Amazon</small></a>
-			</div>
-		</section>
+		<div class="main-page-container">
+		
+			<section class="left-section">
+				<h1 class="logo">Greater Than</h1>
+				<div class="main-message">
+					<h1 class="green-text">Run. Play.</h1>
+					<h1 class="green-text">Hustle. Score.</h1>
+					<p>We’ve all tried sports drinks. Now we’d like you to experience something greater. Infused cocnut water charged with electrolytes and a hint of sea salt for greater hydration and taste. Low calorie. No dyes . No GMOs. No Boundaries.
+					<span class="cite"><em>Be GREATER THAN™ Mark & Jon</em></span></p>
+					<a href="http://amzn.to/1k9VQzj" class="btn btn-green btn-large">Buy Yours Today<br><small>Find it on Amazon</small></a>
+				</div>
+			</section>
 
-		<section class="right-section">
-			<ul>
-				<li class="bottle-left"><img src="images/bottle-1.png"></li>
-				<li class="bottle-front"><img src="images/bottle-1.png"></li>
-				<li class="bottle-right"><img src="images/bottle-1.png"></li>
-			</ul>
-		</section>
-	
-	</div> <!-- END OF MAIN-PAGE-CONTAINER -->
+			<section class="right-section">
+				<ul>
+					<li class="bottle-left"><img src="images/bottle-1.png"></li>
+					<li class="bottle-front"><img src="images/bottle-1.png"></li>
+					<li class="bottle-right"><img src="images/bottle-1.png"></li>
+				</ul>
+			</section>
+		</div> <!-- END OF MAIN-PAGE-CONTAINER -->
+
+		<footer>
+				<section class="right-footer">
+					<ul>
+						<li>&copy; Greater Than <script>document.write(new Date().getFullYear())</script> | All Rights Reserved</li>
+						<li>Contact Us: <a href="mailto:GreaterThan@DrinkGT.com">GreaterThan@DrinkGT.com</a></li>
+					</ul>
+				</section>
+				<section class="left-footer">
+					<ul>
+						<li><a href="https://twitter.com/DrinkGT"><i class="fa fa-twitter"></i> Twitter</a></li>
+						<li><a href="https://www.facebook.com/DrinkGT"><i class="fa fa-facebook"></i> Facebook</a></li>
+						<li><a href="http://instagram.com/greaterthan"><i class="fa fa-instagram"></i> Instagram</a></li>
+					</ul>
+				</section>
+		</footer>
+
+	</div>
 
 	<!-- SCRIPTS -->
-	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script>
+		$('window').ready(function(){
+			$('.page-position-center').css({
+	        position:'absolute',
+	        left: ($(window).width() - $('.page-position-center').outerWidth())/2,
+	        top: ($(window).height() - $('.page-position-center').outerHeight())/2
+	    });
+		});
 
-</body>
+		$(window).resize(function(){
+	    $('.page-position-center').css({
+	        position:'absolute',
+	        left: ($(window).width() - $('.page-position-center').outerWidth())/2,
+	        top: ($(window).height() - $('.page-position-center').outerHeight())/2
+	    });
+		});
+	</script>
+	
+	</body>
 </html>

@@ -1,0 +1,39 @@
+footer{
+	border-top:1px solid $base-grey;
+	color:$dark-grey;
+	font-family:$sans-regular;
+	font-size:$fontsize-small;
+	padding:2.3em 0 4.4em;
+
+	li{
+		display:inline;
+		float:left;
+		padding-right:1.0em;
+
+		a{
+			color:$base-green;
+			@include transition (all 0.2s ease-in-out);
+
+			&:hover{ opacity:0.8; }
+		}
+
+		&:last-child{ padding-right:0; }
+	}
+
+	.right-footer{
+		@include span-columns(6);
+	}
+
+	.left-footer{
+		@include span-columns(6);
+
+		li{ float:right; 
+			a{
+				color:$dark-grey;
+				text-decoration:none;
+			}
+			&:last-child{ padding-right:1.0em; }
+			&:first-child{ padding-right:0em; }
+		}
+	}
+}
