@@ -59,23 +59,7 @@
 	</div>
 
 	<!-- SCRIPTS -->
-	<script>
-		$('window').ready(function(){
-			$('.page-position-center').css({
-	        position:'absolute',
-	        left: ($(window).width() - $('.page-position-center').outerWidth())/2,
-	        top: ($(window).height() - $('.page-position-center').outerHeight())/2
-	    });
-		});
-
-		$(window).resize(function(){
-	    $('.page-position-center').css({
-	        position:'absolute',
-	        left: ($(window).width() - $('.page-position-center').outerWidth())/2,
-	        top: ($(window).height() - $('.page-position-center').outerHeight())/2
-	    });
-		});
-	</script>
+	<script src="js/browserResize.js"></script>
 	
 	</body>
 </html>
