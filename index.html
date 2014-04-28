@@ -19,6 +19,8 @@
 	<div class="page-position-center">
 
 		<div class="main-page-container">
+
+			<img src="images/gmo-seal.jpg" class="gmo-seal">
 		
 			<section class="left-section">
 				<h1 class="logo">Greater Than</h1>
@@ -33,10 +35,29 @@
 
 			<section class="right-section">
 				<ul>
-					<li class="bottle-left"><img src="images/bottle-1.png"></li>
-					<li class="bottle-front"><img src="images/bottle-1.png"></li>
-					<li class="bottle-right"><img src="images/bottle-1.png"></li>
+					<li class="bottle-left bottle-trigger" data-info-box-id="left">
+						<img src="images/bottle-1.png">
+						<div id="info-box-id-left" class="info-box">
+							<p>Hello World!</p>
+							<a href="#" class="close-trigger">X</a>
+						</div>
+					</li>
+					<li class="bottle-front bottle-trigger" data-info-box-id="middle">
+						<img src="images/bottle-1.png">
+						<div id="info-box-id-middle" class="info-box">
+							<p>Hi You</p>
+							<a href="#" class="close-trigger">X</a>
+						</div>
+					</li>
+					<li class="bottle-right bottle-trigger" data-info-box-id="right">
+						<img src="images/bottle-1.png">
+						<div id="info-box-id-right" class="info-box">
+								<p>Hello Tom!</p>
+								<a href="#" class="close-trigger">X</a>
+							</div>
+					</li>
 				</ul>
+
 			</section>
 		</div> <!-- END OF MAIN-PAGE-CONTAINER -->
 
@@ -60,6 +81,7 @@
 
 	<!-- SCRIPTS -->
 	<script src="js/browserResize.js"></script>
+	<script src="js/activeBottle.js"></script>
 	
 	</body>
 </html>

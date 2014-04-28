@@ -9,6 +9,11 @@
 		background:transparent url('../images/background-img.png') no-repeat center center;
 		@include outer-container;
 
+		.gmo-seal{
+			@include position( absolute, null 520px 205px null );
+			width:8%;
+		}
+
 		.left-section{
 			@include span-columns(6);
 			margin-top:5.5em;
@@ -57,17 +62,63 @@
 				display:inline;
 				float:left;
 
-				img{ display:inline; height:746px; padding:2.5em 0 0; }
+				img{ display:inline; height:746px; padding:2.5em 0 0; position:relative; z-index:100; }
 
 				&.bottle-left, &.bottle-right{
 					bottom:15px;
+					@include transition (all 0.5s ease-in-out);
 					position:relative;
 					z-index:1;
+
+					&:hover{
+						cursor:pointer;
+						bottom:36px;
+						z-index:100;
+					}
+
+					&.active-image{
+						bottom:36px;
+						z-index:1000;
+					}
+
+					&.faded{
+						opacity:0.5;
+					}
 				}
 
 				&.bottle-front{
+					bottom:0;
+					@include transition (all 0.5s ease-in-out);
 					position:relative;
 					z-index:2;
+
+					&:hover{
+						cursor:pointer;
+						bottom:36px;
+					}
+
+					&.active-image{
+						bottom:36px;
+						z-index:1001;
+					}
+
+					&.faded{
+						opacity:0.5;
+					}
+				}
+			}
+
+			.info-box{
+				background-color:$base-white;
+				display:none;
+				height:350px;
+				padding:20px 30px;
+				@include position( absolute, null null 175px 215px );
+				width:200px;
+				z-index:1;
+
+				&.active-info-box{
+					display:block;
 				}
 			}
 		}
