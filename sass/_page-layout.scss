@@ -1,0 +1,141 @@
+.page-layout{
+	background-color:$dark-white;
+	@include radial-gradient(circle at 50% 50%, $base-white 20%, $dark-white 40%, #E6E8EB);
+	padding:3.3em;
+	overflow-x:hidden;
+
+	.page-position-center{ position:absolute; }
+
+	.main-page-container{
+		background:transparent url('../images/background-img.png') no-repeat center center;
+		@include outer-container;
+
+		.gmo-seal{
+			@include position( absolute, null 520px 205px null );
+			width:8%;
+		}
+
+		.left-section{
+			@include span-columns(6);
+			margin-top:5.5em;
+
+			.logo{
+				@include retina-image('../images/logo', 424px 160px);
+				background-repeat:no-repeat;
+				height:160px;
+				text-indent:-9999px;
+			}
+
+			.main-message{
+				margin-top:3.3em;
+
+				h1{
+					color:$base-green;
+					text-transform:uppercase;
+					font-size:$fontsize-toobig + 10px;
+				}
+
+				p{
+					color:$dark-grey;
+					font-size:$fontsize-medium;
+					line-height:normal;
+					margin-top:1.5em;
+
+					.cite{
+						font-family:$sans-bold;
+						display:block;
+						margin-top:1.3em; 
+					}
+				}
+
+				.btn-green{
+					margin-top:1.5em;
+				}
+			}
+		}
+
+		.right-section{
+			@include span-columns(6);
+			margin-top:3.3em;
+
+			li{
+				width:145px;
+				display:inline;
+				float:left;
+
+				img{ display:inline; height:746px; padding:2.5em 0 0; position:relative; z-index:100; }
+
+				&.bottle-left, &.bottle-right{
+					bottom:15px;
+					@include transition (all 0.5s ease-in-out);
+					position:relative;
+					z-index:1;
+
+					&:hover{
+						cursor:pointer;
+						bottom:36px;
+						z-index:100;
+					}
+
+					&.active-image{
+						bottom:36px;
+						z-index:1000;
+					}
+
+					&.faded{
+						opacity:0.5;
+					}
+				}
+
+				&.bottle-front{
+					bottom:0;
+					@include transition (all 0.5s ease-in-out);
+					position:relative;
+					z-index:2;
+
+					&:hover{
+						cursor:pointer;
+						bottom:36px;
+					}
+
+					&.active-image{
+						bottom:36px;
+						z-index:1001;
+					}
+
+					&.faded{
+						opacity:0.5;
+					}
+				}
+			}
+
+			.info-box{
+				background-color:$base-grey;
+				border-radius:3px;
+				border:2px solid $base-grey;
+				display:none;
+				min-height:470px;
+				@include background-image(linear-gradient( $base-white 0, $light-grey 100%, transparent 50% ));
+				@include boxShadow(2px 3px 10px, rgba(0,0,0,0.2));
+				@include position( absolute, null 100px 100px null ); 
+				padding:20px 45px;
+				width:300px;
+				z-index:1;
+
+				&.active-info-box{
+					display:block;
+				}
+
+				.close-trigger{
+					border-radius:200px;
+					@extend .btn;
+					@extend .btn-green;
+					height:38px;
+					padding:13px 10px;
+					@include position( absolute, -10px null null -20px );
+					width:38px;
+				}
+			}
+		}
+	}
+}
