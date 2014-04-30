@@ -2265,6 +2265,7 @@ em {
 
 /* line 11, ../sass/_base.scss */
 small {
+  font-family: "AvenirLT-Book", Helvetica, sans-serif;
   font-size: 12px;
 }
 
@@ -2308,10 +2309,16 @@ h6 {
 p {
   font-family: "AvenirLT-Book", Helvetica, sans-serif;
   font-size: 15px;
+  line-height: normal;
 }
 
-/* line 24, ../sass/_base.scss */
-.btn {
+/* line 22, ../sass/_base.scss */
+.text-bold {
+  font-family: "AvenirLT-Black", Helvetica, sans-serif;
+}
+
+/* line 26, ../sass/_base.scss */
+.btn, .page-layout .main-page-container .right-section .info-box .close-trigger {
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -2325,27 +2332,27 @@ p {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 36, ../sass/_base.scss */
-.btn small {
+/* line 38, ../sass/_base.scss */
+.btn small, .page-layout .main-page-container .right-section .info-box .close-trigger small {
   display: block;
   margin-top: 0.5em;
 }
-/* line 41, ../sass/_base.scss */
-.btn:hover {
+/* line 43, ../sass/_base.scss */
+.btn:hover, .page-layout .main-page-container .right-section .info-box .close-trigger:hover {
   text-decoration: none;
 }
-/* line 45, ../sass/_base.scss */
-.btn:active {
+/* line 47, ../sass/_base.scss */
+.btn:active, .page-layout .main-page-container .right-section .info-box .close-trigger:active {
   color: white;
 }
-/* line 49, ../sass/_base.scss */
-.btn:focus {
+/* line 51, ../sass/_base.scss */
+.btn:focus, .page-layout .main-page-container .right-section .info-box .close-trigger:focus {
   color: white;
   outline: none;
 }
 
-/* line 56, ../sass/_base.scss */
-.btn-green {
+/* line 58, ../sass/_base.scss */
+.btn-green, .page-layout .main-page-container .right-section .info-box .close-trigger {
   border: 1px solid #17631C;
   color: white;
   box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2);
@@ -2361,13 +2368,13 @@ p {
   background-image: -webkit-linear-gradient(#2db035, #208626);
   background-image: linear-gradient(#2db035, #208626);
 }
-/* line 64, ../sass/_base.scss */
-.btn-green:hover {
+/* line 66, ../sass/_base.scss */
+.btn-green:hover, .page-layout .main-page-container .right-section .info-box .close-trigger:hover {
   border: 1px solid #5D801A;
   color: #FAFAFA !important;
 }
-/* line 69, ../sass/_base.scss */
-.btn-green:active {
+/* line 71, ../sass/_base.scss */
+.btn-green:active, .page-layout .main-page-container .right-section .info-box .close-trigger:active {
   border: 1px solid #5D801A;
   color: #98CB34;
   background-color: #208626;
@@ -2375,12 +2382,12 @@ p {
   background-image: linear-gradient(#208626, #2db035);
 }
 
-/* line 78, ../sass/_base.scss */
+/* line 80, ../sass/_base.scss */
 .btn-small {
   padding: 8px 10px !important;
 }
 
-/* line 79, ../sass/_base.scss */
+/* line 81, ../sass/_base.scss */
 .btn-large {
   font-size: 24px;
   padding: 15px 50px !important;
@@ -2391,13 +2398,14 @@ p {
   background-color: #fafafa;
   background-image: -webkit-radial-gradient(50% 50%, circle, white 20%, #fafafa 40%, #e6e8eb);
   background-image: radial-gradient(  circle at 50% 50%, white 20%, #fafafa 40%, #e6e8eb);
+  padding: 3.3em;
   overflow-x: hidden;
 }
-/* line 6, ../sass/_page-layout.scss */
+/* line 7, ../sass/_page-layout.scss */
 .page-layout .page-position-center {
   position: absolute;
 }
-/* line 8, ../sass/_page-layout.scss */
+/* line 9, ../sass/_page-layout.scss */
 .page-layout .main-page-container {
   background: transparent url("../images/background-img.png") no-repeat center center;
   max-width: 68em;
@@ -2410,14 +2418,14 @@ p {
   display: table;
   clear: both;
 }
-/* line 12, ../sass/_page-layout.scss */
+/* line 13, ../sass/_page-layout.scss */
 .page-layout .main-page-container .gmo-seal {
   position: absolute;
   right: 520px;
   bottom: 205px;
   width: 8%;
 }
-/* line 17, ../sass/_page-layout.scss */
+/* line 18, ../sass/_page-layout.scss */
 .page-layout .main-page-container .left-section {
   float: left;
   display: block;
@@ -2429,7 +2437,7 @@ p {
 .page-layout .main-page-container .left-section:last-child {
   margin-right: 0;
 }
-/* line 21, ../sass/_page-layout.scss */
+/* line 22, ../sass/_page-layout.scss */
 .page-layout .main-page-container .left-section .logo {
   background-image: url("../images/logo.png");
   background-repeat: no-repeat;
@@ -2437,40 +2445,40 @@ p {
   text-indent: -9999px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-  /* line 21, ../sass/_page-layout.scss */
+  /* line 22, ../sass/_page-layout.scss */
   .page-layout .main-page-container .left-section .logo {
     background-image: url("../images/logo_2x.png");
     background-size: 424px 160px;
   }
 }
-/* line 28, ../sass/_page-layout.scss */
+/* line 29, ../sass/_page-layout.scss */
 .page-layout .main-page-container .left-section .main-message {
   margin-top: 3.3em;
 }
-/* line 31, ../sass/_page-layout.scss */
+/* line 32, ../sass/_page-layout.scss */
 .page-layout .main-page-container .left-section .main-message h1 {
   color: #2db035;
   text-transform: uppercase;
   font-size: 55px;
 }
-/* line 37, ../sass/_page-layout.scss */
+/* line 38, ../sass/_page-layout.scss */
 .page-layout .main-page-container .left-section .main-message p {
   color: #959595;
   font-size: 18px;
   line-height: normal;
   margin-top: 1.5em;
 }
-/* line 43, ../sass/_page-layout.scss */
+/* line 44, ../sass/_page-layout.scss */
 .page-layout .main-page-container .left-section .main-message p .cite {
   font-family: "AvenirLT-Black", Helvetica, sans-serif;
   display: block;
   margin-top: 1.3em;
 }
-/* line 50, ../sass/_page-layout.scss */
-.page-layout .main-page-container .left-section .main-message .btn-green {
+/* line 51, ../sass/_page-layout.scss */
+.page-layout .main-page-container .left-section .main-message .btn-green, .page-layout .main-page-container .left-section .main-message .right-section .info-box .close-trigger, .page-layout .main-page-container .right-section .info-box .left-section .main-message .close-trigger {
   margin-top: 1.5em;
 }
-/* line 56, ../sass/_page-layout.scss */
+/* line 57, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section {
   float: left;
   display: block;
@@ -2482,13 +2490,13 @@ p {
 .page-layout .main-page-container .right-section:last-child {
   margin-right: 0;
 }
-/* line 60, ../sass/_page-layout.scss */
+/* line 61, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li {
   width: 145px;
   display: inline;
   float: left;
 }
-/* line 65, ../sass/_page-layout.scss */
+/* line 66, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li img {
   display: inline;
   height: 746px;
@@ -2496,7 +2504,7 @@ p {
   position: relative;
   z-index: 100;
 }
-/* line 67, ../sass/_page-layout.scss */
+/* line 68, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li.bottle-left, .page-layout .main-page-container .right-section li.bottle-right {
   bottom: 15px;
   -webkit-transition: all 0.5s ease-in-out;
@@ -2505,22 +2513,22 @@ p {
   position: relative;
   z-index: 1;
 }
-/* line 73, ../sass/_page-layout.scss */
+/* line 74, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li.bottle-left:hover, .page-layout .main-page-container .right-section li.bottle-right:hover {
   cursor: pointer;
   bottom: 36px;
   z-index: 100;
 }
-/* line 79, ../sass/_page-layout.scss */
+/* line 80, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li.bottle-left.active-image, .page-layout .main-page-container .right-section li.bottle-right.active-image {
   bottom: 36px;
   z-index: 1000;
 }
-/* line 84, ../sass/_page-layout.scss */
+/* line 85, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li.bottle-left.faded, .page-layout .main-page-container .right-section li.bottle-right.faded {
   opacity: 0.5;
 }
-/* line 89, ../sass/_page-layout.scss */
+/* line 90, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li.bottle-front {
   bottom: 0;
   -webkit-transition: all 0.5s ease-in-out;
@@ -2529,35 +2537,85 @@ p {
   position: relative;
   z-index: 2;
 }
-/* line 95, ../sass/_page-layout.scss */
+/* line 96, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li.bottle-front:hover {
   cursor: pointer;
   bottom: 36px;
 }
-/* line 100, ../sass/_page-layout.scss */
+/* line 101, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li.bottle-front.active-image {
   bottom: 36px;
   z-index: 1001;
 }
-/* line 105, ../sass/_page-layout.scss */
+/* line 106, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section li.bottle-front.faded {
   opacity: 0.5;
 }
-/* line 111, ../sass/_page-layout.scss */
+/* line 112, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section .info-box {
-  background-color: white;
+  background-color: #cccccc;
+  border-radius: 3px;
+  border: 2px solid #cccccc;
   display: none;
-  height: 350px;
-  padding: 20px 30px;
+  min-height: 470px;
+  background-image: -webkit-linear-gradient(white 0, #ebebeb 100%, transparent 50%);
+  background-image: linear-gradient(to   , #ebebeb 100%, transparent 50%);
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
   position: absolute;
-  bottom: 175px;
-  left: 215px;
-  width: 200px;
+  right: 100px;
+  bottom: 100px;
+  padding: 20px 45px;
+  width: 300px;
   z-index: 1;
 }
-/* line 120, ../sass/_page-layout.scss */
+/* line 125, ../sass/_page-layout.scss */
 .page-layout .main-page-container .right-section .info-box.active-info-box {
   display: block;
+}
+/* line 129, ../sass/_page-layout.scss */
+.page-layout .main-page-container .right-section .info-box .close-trigger {
+  border-radius: 200px;
+  height: 38px;
+  padding: 13px 10px;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  width: 38px;
+}
+
+/* line 3, ../sass/_drink-info.scss */
+.drink-info p {
+  font-size: 12px;
+  padding-bottom: 0.4em;
+  text-align: justify;
+}
+/* line 9, ../sass/_drink-info.scss */
+.drink-info small {
+  font-size: 11px;
+  font-style: italic;
+}
+/* line 14, ../sass/_drink-info.scss */
+.drink-info .drink-info-header {
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 0.9em;
+  padding-bottom: 0.3em;
+}
+/* line 22, ../sass/_drink-info.scss */
+.drink-info .drink-info-header .orange-flavor {
+  color: #ef7c02;
+  margin-bottom: 0.3em;
+}
+/* line 22, ../sass/_drink-info.scss */
+.drink-info .drink-info-header .tropical-flavor {
+  color: #ac1a2f;
+  margin-bottom: 0.3em;
+}
+/* line 22, ../sass/_drink-info.scss */
+.drink-info .drink-info-header .berry-flavor {
+  color: #642567;
+  margin-bottom: 0.3em;
 }
 
 /* line 1, ../sass/_footer.scss */

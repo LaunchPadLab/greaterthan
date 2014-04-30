@@ -34,12 +34,13 @@ $(function(){
 			}
 		});
 
-		$('.close-trigger').on('click', function(e){
+		$('.drink-info.close-trigger').on('click', function(e){
 			e.preventDefault();
 			$bottle_triggers.removeClass('active-image');
 			$bottle_triggers.removeClass('faded');
 			$(this).parent('.info-box').removeClass('active-info-box');
 			$(this).find('.active-image').removeClass();
+			console.log('firing');
 		});
 
 	});

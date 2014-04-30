@@ -8,7 +8,7 @@ html, body{
 
 em{ font-style:italic; }
 
-small{ font-size:$fontsize-small; }
+small{ font-family:$sans-regular; font-size:$fontsize-small; }
 
 h1{ font-family:$sans-bold; font-size:$fontsize-toobig; }
 h2{ font-family:$sans-bold; font-size:$fontsize-huge; }
@@ -17,7 +17,9 @@ h4{ font-family:$sans-bold; font-size:$fontsize-big; }
 h5{ font-family:$sans-bold; font-size:$fontsize-medium; }
 h6{ font-family:$sans-bold; font-size:$fontsize-base; }
 
-p{ font-family:$sans-regular; font-size:$fontsize-base; }
+p{ font-family:$sans-regular; font-size:$fontsize-base; line-height:normal; }
+
+.text-bold{ font-family:$sans-bold; }
 
 
 //BUTTON BASE STYLES

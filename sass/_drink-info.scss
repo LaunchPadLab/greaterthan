@@ -1,0 +1,28 @@
+.drink-info{
+
+	p{
+		font-size:$fontsize-small;
+		padding-bottom:0.4em;
+		text-align:justify;
+	}
+
+	small{
+		font-size:$fontsize-tiny;
+		font-style:italic;
+	}
+
+	.drink-info-header{
+		border-bottom:1px solid $light-grey;
+		margin-bottom:0.9em;
+		padding-bottom:0.3em;
+
+		@each $drink, $color in (orange, $base-orange),
+                            (tropical, $base-red),
+                            (berry, $base-purple) {
+  		.#{$drink}-flavor {
+    		color: $color;
+    		margin-bottom:0.3em;
+  		}
+		}
+	}
+}
