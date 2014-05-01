@@ -30,7 +30,7 @@ $(function(){
 				$bottle_triggers.trigger('mouseleave');
 			} else {
 				$(".info-box").removeClass('active-info-box');
-				$info_box.addClass('active-info-box');				
+				$info_box.addClass('active-info-box');
 			}
 		});
 
@@ -40,7 +40,6 @@ $(function(){
 			$bottle_triggers.removeClass('faded');
 			$(this).parent('.info-box').removeClass('active-info-box');
 			$(this).find('.active-image').removeClass();
-			console.log('firing');
 		});
 
 	});
