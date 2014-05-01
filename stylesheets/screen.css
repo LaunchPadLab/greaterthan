@@ -2520,14 +2520,14 @@ p {
 @media screen and (min-width: 45em) {
   /* line 35, ../sass/_page-layout.scss */
   .page-layout .main-page-container .left-section .main-message {
-    margin: 3.3em auto 0;
+    margin: 2.3em auto 0;
     width: 65%;
   }
 }
 @media screen and (min-width: 75em) {
   /* line 35, ../sass/_page-layout.scss */
   .page-layout .main-page-container .left-section .main-message {
-    margin: 3.3em 0 0;
+    margin: 2.3em 0 0;
     width: 100%;
   }
 }
