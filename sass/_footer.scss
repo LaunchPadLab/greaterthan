@@ -2,12 +2,17 @@ footer{
 	border-top:1px solid $base-grey;
 	color:$dark-grey;
 	font-family:$sans-regular;
-	font-size:$fontsize-small;
-	padding:2.3em 0 4.4em;
+	@include outer-container;
+	margin:2.3em auto;
+	padding:2.3em 2.3em 0;
+
+	@include media($mobile){ width:80%; }
+	@include media($desktop){ width:100%; }
 
 	li{
 		display:inline;
 		float:left;
+		font-size:$fontsize-small;
 		padding-right:1.0em;
 
 		a{
@@ -20,14 +25,42 @@ footer{
 		&:last-child{ padding-right:0; }
 	}
 
-	.right-footer{
-		@include span-columns(6);
+	.left-footer{
+		@include media($mobile){ margin-bottom:1.3em; text-align:center; 
+
+			li{ float:none; display:block; margin-bottom:0.89em; }
+		}
+		
+		@include media($desktop){ 
+			@include span-columns(6); 
+			margin-bottom:0; 
+			text-align:left; 
+
+			li{  float:left; display:inline; margin-bottom:0; }
+
+		}
 	}
 
-	.left-footer{
-		@include span-columns(6);
+	.right-footer{
 
-		li{ float:right; 
+		@include media($mobile){ 
+				margin-bottom:1.3em; 
+				text-align:center; 
+				
+				li{ float:none; display:block; margin-bottom:0.89em; }
+			}
+			
+			@include media($desktop){ 
+				@include span-columns(6); 
+				margin-bottom:0; 
+				text-align:left; 
+
+				li{  float:right; display:inline; margin-bottom:0; }
+
+			}
+
+		li{ 
+
 			a{
 				color:$dark-grey;
 				text-decoration:none;
