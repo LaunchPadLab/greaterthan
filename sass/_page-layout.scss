@@ -1,33 +1,41 @@
 .page-layout{
 	background-color:$dark-white;
-	@include radial-gradient(circle at 50% 50%, $base-white 20%, $dark-white 40%, #E6E8EB);
-	padding:3.3em;
+	@include radial-gradient(circle at 50% 50%, $base-white 10%, $dark-white 50%);
 	overflow-x:hidden;
 
-	.page-position-center{ position:absolute; }
-
 	.main-page-container{
-		background:transparent url('../images/background-img.png') no-repeat center center;
 		@include outer-container;
 
+		@include media($mobile){ background:transparent url('../images/background-img.png') no-repeat center 20%; }
+		@include media($desktop){ background:transparent url('../images/background-img.png') no-repeat center center; }
+
 		.gmo-seal{
-			@include position( absolute, null 520px 205px null );
-			width:8%;
+			width:105px;
+
+			@include media($mobile){ display:block; position:relative; margin:1.3em auto 0.3em; }
+			@include media($tablet){ display:inline; position:absolute; margin:35px 1.3em 0; }
+
 		}
 
 		.left-section{
-			@include span-columns(6);
-			margin-top:5.5em;
+			@include media($mobile){ text-align:center; padding:0 1.3em; }
+			@include media($tablet){ @include span-columns(9); margin-top:2.3em; }
+			@include media($desktop){ @include span-columns(6); margin-top:10.5em; text-align:left; }
 
 			.logo{
-				@include retina-image('../images/logo', 424px 160px);
+				@include retina-image('../images/logo', 100% 100%);
 				background-repeat:no-repeat;
-				height:160px;
 				text-indent:-9999px;
+
+				@include media($mobile){ background-size:280px; background-position:center center; height:180px; }
+				@include media($tablet){ background-position:center center;  background-size:424px; height:180px; }
+				@include media($desktop){ background-position:left top; background-size:80%; height:160px; }
 			}
 
 			.main-message{
-				margin-top:3.3em;
+
+				@include media($tablet){ margin:3.3em auto 0; width:65%; }
+				@include media($desktop){ margin:3.3em 0 0; width:100%; }
 
 				h1{
 					color:$base-green;
@@ -55,15 +63,29 @@
 		}
 
 		.right-section{
-			@include span-columns(6);
-			margin-top:3.3em;
+			margin:6.3em auto 0;
+
+			@include media($mobile){ @include span-columns(4); text-align:center; }
+			@include media($tablet){ @include span-columns(9); }
+			@include media($desktop){ @include span-columns(6); text-align:right; }			
 
 			li{
-				width:145px;
 				display:inline;
-				float:left;
 
-				img{ display:inline; height:746px; padding:2.5em 0 0; position:relative; z-index:100; }
+				@include media($mobile){ display:block; float:none; width:100%; }
+				@include media($tablet){ display:inline-block; max-width:225px;}
+				@include media($desktop){ float:left; width:145px;}
+
+				img{ 
+					display:inline;  
+					padding:0.5em 0 0; 
+					position:relative; 
+					z-index:100; 
+
+					@include media($mobile){ height:500px;}
+					@include media($tablet){ height:780px;}
+					@include media($desktop){ height:780px;}
+				}
 
 				&.bottle-left, &.bottle-right{
 					bottom:15px;
@@ -116,11 +138,13 @@
 				display:none;
 				min-height:470px;
 				@include background-image(linear-gradient( $base-white 0, $light-grey 100%, transparent 50% ));
-				@include boxShadow(2px 3px 10px, rgba(0,0,0,0.2));
-				@include position( absolute, null 100px 100px null ); 
+				@include boxShadow(2px 3px 10px, rgba(0,0,0,0.2)); 
 				padding:20px 45px;
 				width:300px;
-				z-index:1;
+
+				@include media($mobile){ bottom:0; left:10px; position:absolute; right:0; z-index:1001; }
+				@include media($tablet){ bottom:100px; left:-20px; position:absolute; right:10px; }
+				@include media($desktop){ left:-250px; position: absolute; right:100px; z-index:1; }
 
 				&.active-info-box{
 					display:block;
