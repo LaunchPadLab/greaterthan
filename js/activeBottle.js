@@ -3,7 +3,8 @@ $(function(){
 		var $bottle_triggers = $(".bottle-trigger"), 
 				info_box_id = $(this).data('info-box-id');
 
-		$bottle_triggers.on('click', function() {
+		$bottle_triggers.on('click', function(e) {
+			e.preventDefault();
 			var active_bottle_image = $(this).attr('class');
 			
 			$bottle_triggers.each(function(i, el){
