@@ -1,165 +1,249 @@
-.page-layout{
-	background-color:$dark-white;
-	@include radial-gradient(circle at 50% 50%, $base-white 10%, $dark-white 50%);
-	overflow-x:hidden;
+.page {
+	@include outer-container;
+}
 
-	.main-page-container{
-		@include outer-container;
+.page__left-section{
+	text-align:center; padding:0 1.3em;
 
-		@include media($mobile){ background:transparent url('../images/background-img.png') no-repeat center 20%; }
-		@include media($desktop){ background:transparent url('../images/background-img.png') no-repeat center center; }
+	@include media($tablet){
+		@include span-columns(9);
+		margin-top: 2.3em;
+	}
 
-		.gmo-seal{
-			width:105px;
+	@include media($desktop){
+		@include span-columns(6);
+		margin-top: 5em;
+		text-align:left;
+	}
 
-			@include media($mobile){ display:block; position:relative; margin:1.3em auto 0.3em; }
-			@include media($tablet){ display:inline; position:absolute; margin:35px 1.3em 0; }
+	.logo {
+		margin-bottom: 30px;
+		max-width: 500px;
+		width: 100%;
+	}
 
+	.main-message {
+		@include clearfix;
+		@include position(relative);
+		margin-bottom: 30px;
+	}
+
+	.main-message__left {
+		display: block;
+		margin-bottom: 20px;
+		text-align: center;
+
+		@include media($tablet) {
+			@include span-columns(1 of 4);
+			@include shift(1);
+			margin-bottom: 0;
 		}
 
-		.left-section{
-			@include media($mobile){ text-align:center; padding:0 1.3em; }
-			@include media($tablet){ @include span-columns(9); margin-top:2.3em; }
-			@include media($desktop){ @include span-columns(6); margin-top:10.5em; text-align:left; }
+		@include media($desktop) {
+			@include span-columns(2 of 6);
+			@include shift(1);
+		}
 
-			.logo{
-				@include retina-image('../images/logo', 100% 100%);
-				background-repeat:no-repeat;
-				text-indent:-9999px;
+		h2 {
+			color: $base-white;
+			font-size: 60px;
+		}
 
-				@include media($mobile){ background-size:280px; background-position:center center; height:180px; }
-				@include media($tablet){ background-position:center center;  background-size:424px; height:180px; }
-				@include media($desktop){ background-position:left top; background-size:80%; height:160px; }
+		h5 {
+			color: $base-white;
+			font-size: 30px;
+		}
+	}
+
+	.main-messsage__right {
+		text-align: center;
+
+		@include media($tablet) {
+			@include span-columns(1 of 4);
+		}
+
+		@include media($desktop) {
+			@include span-columns(2 of 6);
+		}
+
+		.gmo-seal {
+			width: 125px;
+		}
+	}
+
+	.divider {
+		@include position(absolute, -6px 0 null 0);
+		background-color: $base-white;
+		display: none;
+		height: 105px;
+		margin: 0 auto;
+		width: 1px;
+
+		@include media($tablet) { display: block; }
+	}
+}
+
+.main-message__action {
+	display: block;
+	text-align: center;
+}
+
+.page__right-section{
+	display: none;
+	margin: 5em auto 0;
+	text-align: center;
+
+	@include media($tablet){ @include span-columns(9); }
+	@include media($desktop){ @include span-columns(6); text-align:right; }
+
+	li{
+		display:inline;
+
+		@include media($mobile){ display:block; float:none; width:100%; }
+		@include media($tablet){ display:inline-block; max-width:225px;}
+		@include media($desktop){ float:left; width:145px;}
+
+		img{
+			display:inline;
+			padding:0.5em 0 0;
+			position:relative;
+			z-index:100;
+
+			@include media($mobile){ height:500px;}
+			@include media($tablet){ height:780px;}
+			@include media($desktop){ height:780px;}
+		}
+
+		&.bottle-left, &.bottle-right{
+			bottom:15px;
+			@include transition (all 0.5s ease-in-out);
+			position:relative;
+			z-index:1;
+
+			&:hover{
+				cursor:pointer;
+				bottom:36px;
+				z-index:100;
 			}
 
-			.main-message{
+			&.active-image{
+				bottom:36px;
+				z-index:1000;
+			}
 
-				@include media($tablet){ margin:2.3em auto 0; width:65%; }
-				@include media($desktop){ margin:2.3em 0 0; width:100%; }
-
-				h1{
-					color:$base-green;
-					text-transform:uppercase;
-					font-size:$fontsize-toobig + 10px;
-				}
-
-				p{
-					color:$dark-grey;
-					font-size:$fontsize-medium;
-					line-height:normal;
-					margin-top:1.5em;
-
-					.cite{
-						font-family:$sans-bold;
-						display:block;
-						margin-top:1.3em; 
-					}
-				}
-
-				.btn-green{
-					margin-top:1.5em;
-				}
+			&.faded{
+				opacity:0.5;
 			}
 		}
 
-		.right-section{
-			margin:6.3em auto 0;
+		&.bottle-front{
+			bottom:0;
+			@include transition (all 0.5s ease-in-out);
+			position:relative;
+			z-index:2;
 
-			@include media($mobile){ @include span-columns(4); text-align:center; }
-			@include media($tablet){ @include span-columns(9); }
-			@include media($desktop){ @include span-columns(6); text-align:right; }			
-
-			li{
-				display:inline;
-
-				@include media($mobile){ display:block; float:none; width:100%; }
-				@include media($tablet){ display:inline-block; max-width:225px;}
-				@include media($desktop){ float:left; width:145px;}
-
-				img{ 
-					display:inline;  
-					padding:0.5em 0 0; 
-					position:relative; 
-					z-index:100; 
-
-					@include media($mobile){ height:500px;}
-					@include media($tablet){ height:780px;}
-					@include media($desktop){ height:780px;}
-				}
-
-				&.bottle-left, &.bottle-right{
-					bottom:15px;
-					@include transition (all 0.5s ease-in-out);
-					position:relative;
-					z-index:1;
-
-					&:hover{
-						cursor:pointer;
-						bottom:36px;
-						z-index:100;
-					}
-
-					&.active-image{
-						bottom:36px;
-						z-index:1000;
-					}
-
-					&.faded{
-						opacity:0.5;
-					}
-				}
-
-				&.bottle-front{
-					bottom:0;
-					@include transition (all 0.5s ease-in-out);
-					position:relative;
-					z-index:2;
-
-					&:hover{
-						cursor:pointer;
-						bottom:36px;
-					}
-
-					&.active-image{
-						bottom:36px;
-						z-index:1001;
-					}
-
-					&.faded{
-						opacity:0.5;
-					}
-				}
+			&:hover{
+				cursor:pointer;
+				bottom:36px;
 			}
 
-			.info-box{
-				background-color:$base-grey;
-				border-radius:3px;
-				border:2px solid $base-grey;
-				display:none;
-				min-height:470px;
-				@include background-image(linear-gradient( $base-white 0, $light-grey 100%, transparent 50% ));
-				@include boxShadow(2px 3px 10px, rgba(0,0,0,0.2)); 
-				padding:20px 45px;
-				width:300px;
-
-				@include media($mobile){ bottom:0; left:10px; position:absolute; right:0; z-index:1001; }
-				@include media($tablet){ bottom:100px; left:-20px; position:absolute; right:10px; }
-				@include media($desktop){ left:-250px; position: absolute; right:100px; z-index:1; }
-
-				&.active-info-box{
-					display:block;
-				}
-
-				.close-trigger{
-					border-radius:200px;
-					@extend .btn;
-					@extend .btn-green;
-					height:38px;
-					padding:13px 10px;
-					@include position( absolute, -10px null null -20px );
-					width:38px;
-				}
+			&.active-image{
+				bottom:36px;
+				z-index:1001;
 			}
+
+			&.faded{
+				opacity:0.5;
+			}
+		}
+	}
+
+	.info-box{
+		background-color:$base-grey;
+		border-radius:3px;
+		border:2px solid $base-grey;
+		display:none;
+		min-height:470px;
+		@include background-image(linear-gradient( $base-white 0, $light-grey 100%, transparent 50% ));
+		@include boxShadow(2px 3px 10px, rgba(0,0,0,0.2));
+		padding:20px 45px;
+		width:300px;
+
+		@include media($mobile){ bottom:0; left:10px; position:absolute; right:0; z-index:1001; }
+		@include media($tablet){ bottom:100px; left:-20px; position:absolute; right:10px; }
+		@include media($desktop){ left:-250px; position: absolute; right:100px; z-index:1; }
+
+		&.active-info-box{
+			display:block;
+		}
+
+		.close-trigger{
+			border-radius:200px;
+			@extend .btn;
+			@extend .btn-black;
+			height:38px;
+			padding:13px 10px;
+			@include position( absolute, -10px null null -20px );
+			width:38px;
+		}
+	}
+}
+
+.page__footer {
+	@include outer-container;
+	margin-top: 30px;
+	padding: 0 20px;
+	text-align: center;
+
+	@include media($tablet-landscape) {
+		padding: 0;
+	}
+}
+
+.page__footer-large {
+	color: $base-white;
+	font-family: $sans-bold;
+	font-size: $fontsize-big;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+
+	li {
+		display: inline;
+	}
+
+	li:not(:last-child) {
+		margin-right: 10px;
+
+		&:after {
+			content: "|";
+			font-family: $sans-regular;
+			padding-left: 20px;
+		}
+	}
+}
+
+.page__footer-small {
+	color: $base-white;
+	font-family: $sans-regular;
+	font-size: $fontsize-base;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+
+	li {
+		display: inline;
+	}
+
+	a {
+		color: $base-white;
+		text-decoration: none;
+	}
+
+	li:not(:last-child) {
+		margin-right: 10px;
+
+		&:after {
+			content: "|";
+			padding-left: 20px;
 		}
 	}
 }

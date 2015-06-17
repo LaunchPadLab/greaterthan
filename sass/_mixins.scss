@@ -1,5 +1,13 @@
 //EXTRA MIXINS & EXTENDERS
 
+//BACKGROUND SIZE
+@mixin background-size($size){
+  -webkit-background-size: $size;
+  -moz-background-size:    $size;
+  -o-background-size:      $size;
+  background-size:         $size;
+}
+
 //BOX SHADOW
 @mixin boxShadow($dims:0 0 10px, $color:#000) {
   box-shadow: $dims $color; // Opera, FFX4
