@@ -83,6 +83,16 @@
 	}
 }
 
+.mobile-bottles-img {
+	display: block;
+	margin: 3.5em 0 1.3em;
+	width: 100%;
+
+	@include media($tablet){ display: none; }
+
+	img { width: 100%; }
+}
+
 .main-message__action {
 	display: block;
 	text-align: center;
