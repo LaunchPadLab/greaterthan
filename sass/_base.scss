@@ -68,5 +68,14 @@ p{ font-family:$sans-regular; font-size:$fontsize-base; line-height:normal; }
 
 
 //BUTTON STYLES
-	.btn-small{ padding:8px 10px !important; }
-	.btn-large{ font-size:$fontsize-big; padding:15px 60px !important; }
+	.btn-small{ padding:8px 10px; }
+	.btn-large{
+		font-size: $fontsize-medium;
+		padding: 15px 30px;
+
+
+		@include media($tablet) {
+			font-size: $fontsize-big;
+			padding: 15px 60px;
+		}
+	}
