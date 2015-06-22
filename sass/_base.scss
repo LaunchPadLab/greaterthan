@@ -1,9 +1,11 @@
 //GLOBAL STYLES
 
-html, body{
-	height:100%;
-	margin:0;
-	padding:0;
+html,
+body{
+	@include position(fixed, 0 0 0 0);
+	background: transparent url('../images/background-img.jpg') center center no-repeat;
+	@include background-size(cover);
+	overflow-x: hidden;
 }
 
 em{ font-style:italic; }
@@ -54,28 +56,26 @@ p{ font-family:$sans-regular; font-size:$fontsize-base; line-height:normal; }
 		}
 	}
 
-//GREEN BUTTON
-	.btn-green{
-		border: 1px solid #17631C;
-		color:$base-white;
-		@include boxShadow(1px 0 2px, rgba(0,0,0,0.2));
-		@include textShadow(-1px -1px 0px, rgba(0,0,0,0.3));
-		@include insetShadow(0 1px 1px, rgba(255,255,255,0.58));
-		@include linear-gradient($base-green, $dark-green);
+//BLACK BUTTON
+.btn-black{
+	background: $base-black;
+	color:$base-white;
 
-		&:hover{
-			border:1px solid #5D801A;
-			color:#FAFAFA !important;
-		}
-
-		&:active{
-			border:1px solid #5D801A;
-			color:#98CB34;
-			@include linear-gradient($dark-green, $base-green);
-		}
+	&:hover{
+		background: $dark-black;
 	}
+}
 
 
 //BUTTON STYLES
-	.btn-small{ padding:8px 10px !important; }
-	.btn-large{ font-size:$fontsize-big; padding:15px 50px !important; }
+	.btn-small{ padding:8px 10px; }
+	.btn-large{
+		font-size: $fontsize-medium;
+		padding: 15px 30px;
+
+
+		@include media($tablet) {
+			font-size: $fontsize-big;
+			padding: 15px 60px;
+		}
+	}
